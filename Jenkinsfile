@@ -3,12 +3,12 @@ node {
    def mvnHome
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-      git credentialsId: 'github', url: 'git@github.com:sathishbob/jenkins_test.git'
+     git credentialsId: 'github', url: 'git@github.com:SAC4kapoor/sachin.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
-      mvnHome = tool 'mvn3'
-      env.JAVA_HOME="${tool 'jdk8'}"
+      mvnHome = tool 'maven'
+      env.JAVA_HOME="${tool 'java7'}"
       env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
       
    }
