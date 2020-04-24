@@ -6,7 +6,6 @@ pipeline {
             echo "testing echo"
         }
     }
-    stages{
         stage("stage2") {
             steps {
                 echo "1"
